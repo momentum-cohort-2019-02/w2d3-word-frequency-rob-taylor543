@@ -45,7 +45,7 @@ def print_word_freq(file):
     for word in sorted_keys:
         freq = word_freq[word]
         asterisk = "*" * freq
-        print (f"{word:>20} | {freq} {asterisk}")
+        print (f"{word:>20} | {freq:<3} {asterisk}")
     
 if __name__ == "__main__":
     import argparse
