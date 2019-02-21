@@ -40,13 +40,12 @@ def print_word_freq(file):
         else:
             word_freq[word] = 1
 
-    sorted_values = sorted(word_freq.values(), reverse = True)
     sorted_keys = sorted(word_freq, key = word_freq.__getitem__, reverse = True)
 
-    i = 0
     for word in sorted_keys:
-        print (f"{word} | {sorted_values[i]}")
-        i+=1
+        freq = word_freq[word]
+        asterisk = "*" * freq
+        print (f"{word:>20} | {freq} {asterisk}")
     
 if __name__ == "__main__":
     import argparse
